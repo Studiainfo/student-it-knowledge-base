@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ściąga Git – Student IT Knowledge Base</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Ściąga: Git i GitHub</h1>
+    <p class="lead">Polecenia do kontroli wersji i pracy zespołowej – przedmiot WARP.</p>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="../index.html">Start</a></li>
+        <li><a href="bash.html">Bash</a></li>
+        <li><a href="git.html">Git</a></li>
+        <li><a href="dotnet-cli.html">.NET CLI</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Wprowadzenie</h2>
+      <p><strong>Git</strong> to rozproszony system kontroli wersji. Zapamiętuje historię zmian w projekcie w postaci commitów, a <strong>GitHub</strong> pozwala przechowywać repozytorium online i współpracować przez Pull Requesty.</p>
+      <p class="info-note">Zanim zaczniesz nową zmianę, zawsze zsynchronizuj lokalny <code>main</code> z repozytorium zdalnym.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Najważniejsze polecenia</h2>
+      <div class="table-scroll">
+        <table class="command-table">
+          <caption>Podstawowe polecenia Git</caption>
+          <thead>
+            <tr>
+              <th>Polecenie</th>
+              <th>Przykład</th>
+              <th>Opis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>git clone</code></td>
+              <td><code>git clone URL</code></td>
+              <td>Pobiera kopię zdalnego repozytorium na komputer.</td>
+            </tr>
+            <tr>
+              <td><code>git status</code></td>
+              <td><code>git status</code></td>
+              <td>Pokazuje stan repozytorium: zmienione, dodane i nieśledzone pliki.</td>
+            </tr>
+            <tr>
+              <td><code>git add</code></td>
+              <td><code>git add index.html</code></td>
+              <td>Dodaje zmiany do poczekalni (staging area).</td>
+            </tr>
+            <tr>
+              <td><code>git commit</code></td>
+              <td><code>git commit -m "feat: opis"</code></td>
+              <td>Zapisuje zmiany z poczekalni jako nowy commit.</td>
+            </tr>
+            <tr>
+              <td><code>git push</code></td>
+              <td><code>git push -u origin nazwa-brancha</code></td>
+              <td>Wysyła lokalne commity do repozytorium zdalnego.</td>
+            </tr>
+            <tr>
+              <td><code>git pull</code></td>
+              <td><code>git pull --ff-only origin main</code></td>
+              <td>Pobiera i scala zmiany z repozytorium zdalnego.</td>
+            </tr>
+            <tr>
+              <td><code>git fetch</code></td>
+              <td><code>git fetch origin</code></td>
+              <td>Pobiera informacje o zmianach zdalnych bez scalania ich.</td>
+            </tr>
+            <tr>
+              <td><code>git branch</code></td>
+              <td><code>git branch -a</code></td>
+              <td>Wyświetla listę gałęzi lokalnych i zdalnych.</td>
+            </tr>
+            <tr>
+              <td><code>git switch</code></td>
+              <td><code>git switch -c feature/nowa</code></td>
+              <td>Przełącza gałąź; z opcją <code>-c</code> tworzy nową.</td>
+            </tr>
+            <tr>
+              <td><code>git log</code></td>
+              <td><code>git log --oneline -5</code></td>
+              <td>Wyświetla historię commitów.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Procedura pracy na branchu</h2>
+      <ol class="steps">
+        <li><strong>Synchronizacja</strong> – <code>git switch main</code> i <code>git pull --ff-only origin main</code>.</li>
+        <li><strong>Branch</strong> – <code>git switch -c feature/nazwa-zmiany</code>.</li>
+        <li><strong>Zmiana</strong> – edytuj pliki i sprawdź je poleceniem <code>git status</code>.</li>
+        <li><strong>Commit</strong> – <code>git add plik</code> i <code>git commit -m "opis"</code>.</li>
+        <li><strong>Push</strong> – <code>git push -u origin feature/nazwa-zmiany</code>.</li>
+        <li><strong>Pull Request</strong> – otwórz PR na GitHubie, poproś o review i po akceptacji scal go do <code>main</code>.</li>
+      </ol>
+    </section>
+
+    <section class="panel">
+      <h2>Źródła i dokumentacja</h2>
+      <ul>
+        <li><a href="../docs/warp/git.md">Oryginalna ściąga w Markdown</a></li>
+        <li><a href="https://git-scm.com/docs">Oficjalna dokumentacja Git</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Projekt edukacyjny – Warsztat Programisty, laboratorium 06.</p>
+  </footer>
+</body>
+</html>
