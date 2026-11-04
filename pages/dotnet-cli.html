@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ściąga .NET CLI – Student IT Knowledge Base</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Ściąga: .NET CLI</h1>
+    <p class="lead">Tworzenie, budowanie i uruchamianie aplikacji .NET z terminala – przedmiot PRG1.</p>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="../index.html">Start</a></li>
+        <li><a href="bash.html">Bash</a></li>
+        <li><a href="git.html">Git</a></li>
+        <li><a href="dotnet-cli.html">.NET CLI</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Wprowadzenie</h2>
+      <p><strong>.NET CLI</strong> to narzędzie wiersza poleceń <code>dotnet</code>, które pozwala tworzyć projekty, pobierać zależności, kompilować i uruchamiać aplikacje bez otwierania IDE.</p>
+      <p class="info-note">Polecenia projektu, takie jak <code>build</code> czy <code>run</code>, wykonuj w katalogu, w którym znajduje się plik <code>.csproj</code>.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Najważniejsze polecenia</h2>
+      <div class="table-scroll">
+        <table class="command-table">
+          <caption>Podstawowe polecenia .NET CLI</caption>
+          <thead>
+            <tr>
+              <th>Polecenie</th>
+              <th>Przykład</th>
+              <th>Opis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>dotnet --version</code></td>
+              <td><code>dotnet --version</code></td>
+              <td>Wyświetla wersję używanego SDK.</td>
+            </tr>
+            <tr>
+              <td><code>dotnet --list-sdks</code></td>
+              <td><code>dotnet --list-sdks</code></td>
+              <td>Wyświetla wszystkie zainstalowane wersje SDK.</td>
+            </tr>
+            <tr>
+              <td><code>dotnet new list</code></td>
+              <td><code>dotnet new list</code></td>
+              <td>Pokazuje dostępne szablony projektów.</td>
+            </tr>
+            <tr>
+              <td><code>dotnet new console</code></td>
+              <td><code>dotnet new console -o HelloApp</code></td>
+              <td>Tworzy nową aplikację konsolową w podanym katalogu.</td>
+            </tr>
+            <tr>
+              <td><code>dotnet restore</code></td>
+              <td><code>dotnet restore</code></td>
+              <td>Pobiera zależności (pakiety NuGet) projektu.</td>
+            </tr>
+            <tr>
+              <td><code>dotnet build</code></td>
+              <td><code>dotnet build</code></td>
+              <td>Kompiluje projekt i zgłasza błędy kompilacji.</td>
+            </tr>
+            <tr>
+              <td><code>dotnet run</code></td>
+              <td><code>dotnet run</code></td>
+              <td>Buduje projekt (jeśli trzeba) i uruchamia aplikację.</td>
+            </tr>
+            <tr>
+              <td><code>dotnet clean</code></td>
+              <td><code>dotnet clean</code></td>
+              <td>Usuwa pliki wynikowe poprzedniej kompilacji.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Od zera do działającej aplikacji</h2>
+      <p>Kompletna sekwencja utworzenia i uruchomienia aplikacji konsolowej:</p>
+      <pre><code>dotnet --version
+dotnet new console -o HelloApp
+cd HelloApp
+dotnet restore
+dotnet build
+dotnet run
+dotnet clean</code></pre>
+    </section>
+
+    <section class="panel">
+      <h2>Źródła i dokumentacja</h2>
+      <ul>
+        <li><a href="../docs/prg1/dotnet-cli.md">Oryginalna ściąga w Markdown</a></li>
+        <li><a href="https://learn.microsoft.com/dotnet/core/tools/">Oficjalna dokumentacja .NET CLI</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Projekt edukacyjny – Warsztat Programisty, laboratorium 06.</p>
+  </footer>
+</body>
+</html>
