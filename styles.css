@@ -1,0 +1,179 @@
+:root {
+  --page: #0f172a;
+  --surface: #172033;
+  --surface-alt: #1e293b;
+  --text: #e5edf7;
+  --muted: #a8b3c7;
+  --accent: #5eead4;
+  --line: #334155;
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--page);
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+header,
+main,
+footer {
+  width: min(100% - 32px, 960px);
+  margin-inline: auto;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+.site-header {
+  padding: 32px 0 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+/* --- Nawigacja --- */
+.nav-list {
+  display: flex;        
+  gap: 8px;
+  padding: 0;
+  list-style: none;     
+}
+
+.nav-list a {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.nav-list a:hover {
+  border-color: var(--accent);
+  background: var(--surface);
+}
+
+
+.panel {
+  margin: var(--space-3) 0;
+  padding: var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.info-note {
+  padding: var(--space-2);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--surface);
+}
+
+.topic-list {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+.topic-list li {
+  padding: 14px var(--space-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.steps {
+  padding-left: var(--space-3);
+}
+
+.steps li {
+  margin-bottom: var(--space-1);
+}
+
+.steps li::marker {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.command-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+}
+
+.command-table caption {
+  margin-bottom: var(--space-1);
+  text-align: left;
+  font-weight: 700;
+}
+
+.command-table th,
+.command-table td {
+  padding: 12px var(--space-2);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.command-table th {
+  color: var(--accent);
+}
+
+.command-table tbody tr:hover {
+  background: var(--surface-alt);
+}
+
+code {
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--surface-alt);
+  font-family: ui-monospace, Consolas, monospace;
+}
+
+pre {
+  overflow-x: auto;
+  padding: var(--space-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-alt);
+}
+
+pre code {
+  padding: 0;
+  background: none;
+}
+
+.site-footer {
+  margin-top: var(--space-4);
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
